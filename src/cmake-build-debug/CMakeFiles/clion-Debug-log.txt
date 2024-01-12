@@ -1,32 +1,39 @@
 /private/var/folders/zz/zyxvpxvq6csfxvn_n0003skr000ycp/T/AppTranslocation/465610C5-53D7-4A6E-ADBE-4B45BF64B41D/d/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" -S "/Users/naillora/Desktop/School Projects/s21_decimal/src" -B "/Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug"
-CMake Deprecation Warning:
-  Support for "Extra Generators" like
-
-    CodeBlocks
-
-  is deprecated and will be removed from a future version of CMake.  IDEs may
-  use the cmake-file-api(7) to view CMake-generated project build trees.
-
-
-CMake Warning (dev) in CMakeLists.txt:
-  No project() command is present.  The top-level CMakeLists.txt file must
-  contain a literal, direct call to the project() command.  Add a line of
-  code such as
-
-    project(ProjectName)
-
-  near the top of the file, but after cmake_minimum_required().
-
-  CMake is pretending there is a "project(Project)" command on the first
-  line.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Warning (dev) in CMakeLists.txt:
-  cmake_minimum_required() should be called prior to this top-level project()
-  call.  Please see the cmake-commands(7) manual for usage documentation of
-  both commands.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
--- Configuring done (0.1s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 2. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 8. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 26. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 30. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 36. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 59. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 76. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 82. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 121. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 125. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 134. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 144. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 167. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 171. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 177. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 181. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 188. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 200. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 209. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 219. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 272. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 282. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 290. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 311. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 323. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 327. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 335. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 347. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 389. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 405. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 414. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 418. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 448. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 452. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 485. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt on line 489. Offending entry: >>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
+CMake Error: The current CMakeCache.txt directory /Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeCache.txt is different than the directory /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+CMake Error: The source "/Users/naillora/Desktop/School Projects/s21_decimal/src/CMakeLists.txt" does not match the source "/Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
