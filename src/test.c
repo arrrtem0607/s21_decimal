@@ -15,7 +15,10 @@ int main() {
     s21_decimal *value_2_ptr = &value_2;
     //s21_decimal result = {0};
     //s21_decimal *result_ptr = &result;
-    scanf("%f %f", &val1, &val2);
+    float a = 0.00000123;
+    float b = 100000000000.0;
+    printf("%f\n%f\n\n", a, b);
+    scanf("%f %f", &value_1, &value_2);
     s21_from_float_to_decimal(value_1_ptr, val1);
     s21_from_float_to_decimal(value_2_ptr, val2);
     //s21_from_int_to_decimal(value_1_ptr, val1);
@@ -30,8 +33,8 @@ int main() {
     //print_sign(result);
     //printf("%u\n", result.bits[0]);
     //print_scale_ratio_16_23(result);
-    //print_decimal_in_binary(value_1);
-    //print_decimal_in_binary(value_2);
+    print_decimal_in_binary(value_1);
+    print_decimal_in_binary(value_2);
     //print_decimal_in_binary(result);
     return 0;
 }

@@ -1,0 +1,2 @@
+/Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir

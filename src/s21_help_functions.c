@@ -95,7 +95,7 @@ int s21_sub_mantissas(s21_decimal one, s21_decimal two, s21_decimal* result) {
             remember = 0;
         }
 
-        s21_set_bit(i, res_value, &temp);
+        s21_set_bit_big(i, res_value, &temp);
     }
 
     flag = s21_copy_bigdecimal_to_decimal(temp, result);

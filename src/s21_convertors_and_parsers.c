@@ -12,33 +12,6 @@ int s21_from_int_to_decimal(s21_decimal *dst, int input) {
   return 0;
 }
 
-/*int s21_from_float_to_decimal(s21_decimal *dst, float input) {
-    int flag = 0;
-    s21_decl_to_null(dst);
-    if (fabs(input) < powl(10.0, -1 * MAX_POW)) {
-        flag = 1;
-        // dst->state = S21_NULL; хз нужно ли это, по идее программа завершится с ошибкой
-    } else if (input >= MAX_DECIMAL) {
-        flag = 1;
-        // dst->state = S21_PLUS_INF; хз нужно ли это, по идее программа завершится с ошибкой
-    } else if (input <= MIN_DECIMAL) {
-        flag = 1;
-        // dst->state = S21_MINUS_INF; хз нужно ли это, по идее программа завершится с ошибкой
-    } else {
-        int scale = 0;
-        if (input < 0)
-            s21_set_sign_31(1, dst);
-        input = fabsl(input);
-        while (!(int)input && scale < MAX_POW) {
-            input *= 10;
-            scale++;
-        }
-        s21_set_scale_ratio_16_23(scale, dst);
-    }
-  return flag;
-}
-*/
-
 int s21_from_float_to_decimal(s21_decimal *dst, float input) {
     if (input < 0){
         s21_set_sign_31(1 ,dst);
@@ -72,8 +45,19 @@ int s21_from_float_to_decimal(s21_decimal *dst, float input) {
     } else {
         str[7] = '\0';
     }
-    strtof();
-    printf("%s\n", str);
+    char* ost;
+    float res = strtof(str, &ost);
+    int resint = (int)res;
+    int scale = 0;
+    printf("src: %f\n", res);
+    while (res - resint){
+        res *= 10;
+        resint = (int)res;
+        scale += 1;
+    }
+    s21_set_scale_ratio_16_23(scale, dst);
+    printf("mantisse: %d\n", resint);
+    printf("scale: %d\n", scale);
     return 0;
 }
 
