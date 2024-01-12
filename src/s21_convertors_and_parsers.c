@@ -20,8 +20,8 @@ int s21_from_float_to_decimal(s21_decimal *dst, float input) {
     char str[100];
     int numChars = sprintf(str, "%.*g", 7, input);
     str[numChars] = '\0';
-    char* ost;
-    float res = strtof(str, &ost);
+    float res = strtof(str, &str);
+    printf("%f\n", res);
     int resint = (int)res;
     int scale = 0;
     //printf("src: %.20f\n", res);
@@ -30,6 +30,7 @@ int s21_from_float_to_decimal(s21_decimal *dst, float input) {
         resint = (int)res;
         scale += 1;
     }
+    printf("%d", resint);
     s21_set_scale_ratio_16_23(scale, dst);
     dst->bits[0] = res;
     //printf("mantisse: %d\n", resint);

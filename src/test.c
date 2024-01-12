@@ -31,11 +31,12 @@ int main() {
         //s21_sub(value_1, value_2, result_ptr);
     }
     print_sign(result);
-    printf("%u\n", result.bits[0]);
-    print_scale_ratio_16_23(result);
+    printf("%u\n", value_1.bits[0]);
+    //print_scale_ratio_16_23(result);
+    print_scale_ratio_16_23(value_1);
     print_decimal_in_binary(value_1);
-    print_decimal_in_binary(value_2);
-    print_decimal_in_binary(result);
+    //print_decimal_in_binary(value_2);
+    //print_decimal_in_binary(result);
     return 0;
 }
 
