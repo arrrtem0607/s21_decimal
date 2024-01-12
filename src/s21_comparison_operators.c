@@ -4,7 +4,6 @@
 // int s21_is_less(s21_decimal, s21_decimal) // сравнивает два числа (меньше)
 // int s21_is_less_or_equal(s21_decimal, s21_decimal) // сравнивает два числа (меньше или равно)
 // int s21_is_greater(s21_decimal, s21_decimal) // сравнивает два числа (больше)
-#include "s21_header.h"
 
 int s21_is_greater(s21_decimal value_1, s21_decimal value_2) {
     int result = 0; // 0 - первое не больше второго, 1 - первое больше второго

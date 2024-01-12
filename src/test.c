@@ -13,29 +13,29 @@ int main() {
     s21_decimal *value_1_ptr = &value_1;
     s21_decimal value_2 = {0};
     s21_decimal *value_2_ptr = &value_2;
-    //s21_decimal result = {0};
-    //s21_decimal *result_ptr = &result;
-    float a = 0.00000123;
-    float b = 100000000000.0;
-    printf("%f\n%f\n\n", a, b);
-    scanf("%f %f", &value_1, &value_2);
+    s21_decimal result = {0};
+    s21_decimal *result_ptr = &result;
+    /*float a = 0.00000123;
+    float b = 100000000000.0;*/
+    scanf("%f %f", &val1, &val2);
+    printf("val1:%.20f\nval2:%.20f\n\n", val1, val2);
     s21_from_float_to_decimal(value_1_ptr, val1);
     s21_from_float_to_decimal(value_2_ptr, val2);
     //s21_from_int_to_decimal(value_1_ptr, val1);
     //s21_from_int_to_decimal(value_2_ptr, val2);
-    //int mod = 0;
-    //scanf("%d", &mod);
-    //if (mod == 1) {
-    //    s21_add(value_1, value_2, result_ptr);
-    //} else if (mod == 2) {
+    int mod = 0;
+    scanf("%d", &mod);
+    if (mod == 1) {
+        s21_add(value_1, value_2, result_ptr);
+    } else if (mod == 2) {
         //s21_sub(value_1, value_2, result_ptr);
-    //}
-    //print_sign(result);
-    //printf("%u\n", result.bits[0]);
-    //print_scale_ratio_16_23(result);
+    }
+    print_sign(result);
+    printf("%u\n", result.bits[0]);
+    print_scale_ratio_16_23(result);
     print_decimal_in_binary(value_1);
     print_decimal_in_binary(value_2);
-    //print_decimal_in_binary(result);
+    print_decimal_in_binary(result);
     return 0;
 }
 

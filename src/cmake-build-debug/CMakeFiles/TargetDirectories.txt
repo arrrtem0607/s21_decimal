@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-/Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/naillora/Desktop/School Projects/s21_decimal/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-=======
 /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug/CMakeFiles/test.dir
 /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
->>>>>>> 9a405c2eb2f98fcd259e8afff14d65fa050bcb21
