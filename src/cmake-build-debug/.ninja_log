@@ -1,0 +1,5 @@
+# ninja log v5
+1	258	1705075510666349875	CMakeFiles/test.dir/s21_comparison_operators.c.o	e8b2d066511bcb7
+0	258	1705075510666655875	CMakeFiles/test.dir/test.c.o	7279d3b0ed733bdc
+1	258	1705075510666645708	CMakeFiles/test.dir/s21_arithmetic_operators.c.o	5029075a50948f33
+1	260	1705075510668758541	CMakeFiles/test.dir/s21_help_functions.c.o	4265591bc6c9ec8b

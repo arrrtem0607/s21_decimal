@@ -1,0 +1,3 @@
+/Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug/CMakeFiles/test.dir
+/Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
