@@ -29,17 +29,17 @@ int main() {
     } else if (mod == 2) {
         //s21_sub(value_1, value_2, result_ptr);
     }
-    printf("%d\n", value_1.bits[0]);
+    /*printf("%u\n", value_1.bits[0]);
     print_scale_ratio_16_23(value_1);
     print_decimal_in_binary(value_1);
 
-    printf("%d\n", value_2.bits[0]);
+    printf("%u\n", value_2.bits[0]);
     print_scale_ratio_16_23(value_2);
     print_decimal_in_binary(value_2);
 
-    printf("%d\n", result.bits[0]);
+    printf("%u\n", result.bits[0]);
     print_scale_ratio_16_23(result);
-    print_decimal_in_binary(result);
+    print_decimal_in_binary(result);*/
     print_s21_decimal(result);
     return 0;
 }
@@ -75,7 +75,7 @@ void print_s21_decimal(s21_decimal number) {
     }
 
     // Получаем значение экспоненты
-    uint32_t scale = (number.bits[3] >> 16) & 0xFF;
+    int scale = (number.bits[3] >> 16) & 0xFF;
 
     // Выводим знак
     if (sign) {
