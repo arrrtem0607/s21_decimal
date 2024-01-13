@@ -25,11 +25,6 @@ void s21_set_sign_31(int sign, s21_decimal* number) {
   s21_set_bit(SIGN_POS, sign, number);
 }
 
-void s21_set_scale_ratio_16_23( s21_decimal* number, int scale) {
-  number->bits[3] &= 0xFF00FFFF;
-  number->bits[3] |= (scale << 16);
-}
-
 int s21_get_scale_ratio_16_23(s21_decimal number) {
   return (number.bits[3] & 0x00FF0000) >> 16;
   // вернет значимые байты с 16 по 23 с помощью маски и логического сдвига на 16
@@ -58,7 +53,8 @@ void s21_normalization(s21_decimal* number_1, s21_decimal* number_2) {
   }
 }  //приводит к общему знаменателю
 
-int s21_scale_increase(s21_decimal* number, int shift) {
+
+(s21_decimal* number, int shift) {
   if (s21_get_scale_ratio_16_23(*number) + shift < 29) {
     s21_set_scale_ratio_16_23(s21_get_scale_ratio_16_23(*number) + shift, number);
     s21_decimal additional_number_1 = *number, additional_number_2 = *number;
@@ -246,4 +242,24 @@ void s21_decl_to_null(s21_decimal* decl) {
   for (int i = 0; i < 128; ++i) {
     s21_set_bit(i, 0, decl);
   }
+}
+
+void s21_normalization(s21_decimal* number_1, s21_decimal* number_2, s21_decimal* result) {
+    if (s21_get_scale_ratio_16_23(*number_1) !=
+        s21_get_scale_ratio_16_23(*number_2)) {
+        if (s21_get_scale_ratio_16_23(*number_1) <
+            s21_get_scale_ratio_16_23(*number_2)) {
+            s21_normalization(number_2, number_1, result);
+        } else {
+            int scale_high = s21_get_scale_ratio_16_23(*number_1);
+            int scale_low = s21_get_scale_ratio_16_23(*number_2);
+
+            while (scale_high != scale_low && !s21_get_bit(*number_2, 96)) {
+                scale_low += 1;
+                s21_multiply_mantissa_by_10(number_2);
+            }
+            s21_set_scale_ratio_16_23(scale_low,number_2);
+            s21_set_scale_ratio_16_23(scale_low, result);
+        }
+    }
 }

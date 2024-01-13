@@ -44,7 +44,8 @@ int s21_get_bit(s21_decimal value, int index);  // получает бит по 
 void s21_set_bit(int i, int res_value, s21_decimal* result);  // устанавливает бит по индексу
 void s21_set_sign_31(int sign, s21_decimal* value);  // устанавливает знак числа
 void s21_set_scale_ratio_16_23(int scale, s21_decimal* value);  // устанавливает коэфициент масштабирования (scale)
-// void normalize(s21_decimal* value); //приводит к общему знаменателю
+void s21_normalization(s21_decimal* number_1, s21_decimal* number_2, s21_decimal* result); //приводит к общему знаменателю
+void s21_multiply_mantissa_by_10(s21_decimal *number);
 int s21_copy_bigdecimal_to_decimal(s21_big_decimal src, s21_decimal* dst); //копирует из s21_big_decimal в s21_decimal и возвращает ошибку, если переполнение
 int check_overflow(s21_big_decimal src); //проверяет на переполнение
 int s21_add_mantissas(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);

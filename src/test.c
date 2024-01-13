@@ -3,40 +3,44 @@
 void print_sign(s21_decimal number);
 void print_decimal_in_binary(s21_decimal number);
 void print_scale_ratio_16_23(s21_decimal number);
+void s21_set_scale_ratio_16_23_big (int scale, s21_big_decimal *value);
+void print_s21_decimal(s21_decimal number);
+
+
 
 int main() {
-    float val1 = 0;
-    float val2 = 0;
-    //int val1 = 0;
-    //int val2 = 0;
+    float val1;
+    float val2;
     s21_decimal value_1 = {0};
     s21_decimal *value_1_ptr = &value_1;
     s21_decimal value_2 = {0};
     s21_decimal *value_2_ptr = &value_2;
     s21_decimal result = {0};
     s21_decimal *result_ptr = &result;
-    /*float a = 0.00000123;
-    float b = 100000000000.0;*/
     scanf("%f %f", &val1, &val2);
-    printf("val1:%.20f\nval2:%.20f\n\n", val1, val2);
+    printf("результат сложения флоатов = %.30f\n", val1 + val2);
     s21_from_float_to_decimal(value_1_ptr, val1);
     s21_from_float_to_decimal(value_2_ptr, val2);
-    //s21_from_int_to_decimal(value_1_ptr, val1);
-    //s21_from_int_to_decimal(value_2_ptr, val2);
-    int mod = 0;
+    int mod;
     scanf("%d", &mod);
     if (mod == 1) {
+        s21_normalization(value_1_ptr, value_2_ptr, result_ptr);
         s21_add(value_1, value_2, result_ptr);
     } else if (mod == 2) {
         //s21_sub(value_1, value_2, result_ptr);
     }
-    print_sign(result);
-    printf("%u\n", value_1.bits[0]);
-    //print_scale_ratio_16_23(result);
+    printf("%d\n", value_1.bits[0]);
     print_scale_ratio_16_23(value_1);
     print_decimal_in_binary(value_1);
-    //print_decimal_in_binary(value_2);
-    //print_decimal_in_binary(result);
+
+    printf("%d\n", value_2.bits[0]);
+    print_scale_ratio_16_23(value_2);
+    print_decimal_in_binary(value_2);
+
+    printf("%d\n", result.bits[0]);
+    print_scale_ratio_16_23(result);
+    print_decimal_in_binary(result);
+    print_s21_decimal(result);
     return 0;
 }
 
@@ -57,4 +61,33 @@ void print_sign(s21_decimal number) {
 
 void print_scale_ratio_16_23(s21_decimal number) {
     printf("Scale ratio: %d\n", s21_get_scale_ratio_16_23(number));
+}
+
+void print_s21_decimal(s21_decimal number) {
+    printf("результат сложения децималов = ");
+    // Проверяем знак числа
+    int sign = s21_get_sign_31(number);
+
+    // Преобразуем мантиссу в десятичное число
+    unsigned long long mantissa = 0;
+    for (int i = 0; i < 3; i++) {
+        mantissa += (unsigned long long)number.bits[i] << (32 * i);
+    }
+
+    // Получаем значение экспоненты
+    uint32_t scale = (number.bits[3] >> 16) & 0xFF;
+
+    // Выводим знак
+    if (sign) {
+        printf("-");
+    }
+
+    // Выводим мантиссу с учетом экспоненты
+    if (scale == 0) {
+        printf("%llu", mantissa);
+    } else {
+        unsigned long long int_part = mantissa / pow(10, scale);
+        unsigned long long fractional_part = mantissa % (unsigned long long)pow(10, scale);
+        printf("%llu.%0*llu", int_part, scale, fractional_part);
+    }
 }
