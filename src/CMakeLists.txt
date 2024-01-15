@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(MyProject)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra -lcheck")
 
 add_executable(test
         test.c
@@ -9,4 +9,5 @@ add_executable(test
         s21_arithmetic_operators.c
         s21_convertors_and_parsers.c
         s21_comparison_operators.c
+
 )

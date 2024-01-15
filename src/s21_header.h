@@ -61,12 +61,12 @@ void s21_add_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);
 // int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); //делит два числа
 
 // Функции сравнения
-// int s21_is_less(s21_decimal, s21_decimal) сравнивает два числа (меньше)
-// int s21_is_less_or_equal(s21_decimal, s21_decimal) сравнивает два числа(меньше или равно)
+int s21_is_less(s21_decimal, s21_decimal); //сравнивает два числа (меньше)
+int s21_is_less_or_equal(s21_decimal, s21_decimal); //сравнивает два числа(меньше или равно)
 int s21_is_greater(s21_decimal value_1, s21_decimal value_2); //сравнивает два числа (больше)
-// int s21_is_greater_or_equal(s21_decimal, s21_decimal) сравнивает два числа (больше или равно)
-// int s21_is_equal(s21_decimal, s21_decimal) сравнивает два числа (равно)
-// int s21_is_not_equal(s21_decimal, s21_decimal) сравнивает два числа (не равно)
+int s21_is_greater_or_equal(s21_decimal, s21_decimal); // сравнивает два числа (больше или равно)
+int s21_is_equal(s21_decimal, s21_decimal); //сравнивает два числа (равно)
+int s21_is_not_equal(s21_decimal, s21_decimal); // сравнивает два числа (не равно)
 
 // Функции преобразования
 int s21_from_int_to_decimal(s21_decimal* dst, int input);  // преобразует из int в s21_decimal (для ввода)

@@ -72,10 +72,7 @@ int s21_add_mantissas(s21_decimal one, s21_decimal two, s21_decimal* result) {
         s21_set_bit_big(i, res_value, &temp);
     }
     flag = s21_copy_bigdecimal_to_decimal(temp, result);
-    // копируем temp в result, если нет переполнения, если есть переполнение
-    // (переполнение еще зависит от scale) возвращаем код ошибки
-    //  тут нужна функция копирования
-    return flag;  // не ноль в случае переполнения
+    return flag;
 }
 
 int s21_sub_mantissas(s21_decimal one, s21_decimal two, s21_decimal* result) {

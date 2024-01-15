@@ -24,12 +24,12 @@ int main() {
     int mod;
     scanf("%d", &mod);
     if (mod == 1) {
-        s21_normalization(value_1_ptr, value_2_ptr, result_ptr);
+        //s21_normalization(value_1_ptr, value_2_ptr, result_ptr);
         s21_add(value_1, value_2, result_ptr);
     } else if (mod == 2) {
         //s21_sub(value_1, value_2, result_ptr);
     }
-    /*printf("%u\n", value_1.bits[0]);
+    printf("%u\n", value_1.bits[0]);
     print_scale_ratio_16_23(value_1);
     print_decimal_in_binary(value_1);
 
@@ -39,7 +39,7 @@ int main() {
 
     printf("%u\n", result.bits[0]);
     print_scale_ratio_16_23(result);
-    print_decimal_in_binary(result);*/
+    print_decimal_in_binary(result);
     print_s21_decimal(result);
     return 0;
 }

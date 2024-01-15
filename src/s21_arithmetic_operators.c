@@ -1,6 +1,7 @@
 #include "s21_header.h"
 
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal* result) {
+    s21_normalization(&value_1, &value_2, result);
     int sign_1 = s21_get_sign_31(value_1);
     int sign_2 = s21_get_sign_31(value_2);
     int flag = 0;
