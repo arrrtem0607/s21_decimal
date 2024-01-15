@@ -12,7 +12,7 @@
 #define SIGN_POS 127
 
 #define MAX_DECIMAL powl(2.0, 96)
-#define MIN_DECIMAL -1 * MAX_DECIMAL
+#define MIN_DECIMAL (-1 * MAX_DECIMAL)
 
 #define MAX_POW 28
 #define FLOAT_ACCURACY 7
@@ -20,7 +20,7 @@
 
 
 //  Под комментариями находятся пояснения функции, которые нужно реализовать
-//  Для каждого раздела функций нужно создать отдельный файл с именем s21_имя_раздела.c (например s21_arithmetic_operators.c)
+//  Для каждого раздела функций нужно создать отдельный файл с именем s21_имя_раздела.с (например s21_arithmetic_operators.с)
 //  Вспомогательные функции можно и нужно добавлять по необходимости
 
 //gcc s21_help_functions.c s21_arithmetic_operators.c s21_convertors_and_parsers.c test.c
