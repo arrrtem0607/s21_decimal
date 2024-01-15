@@ -29,6 +29,12 @@ int main() {
     } else if (mod == 2) {
         s21_sub(value_1, value_2, result_ptr);
         printf("результат во флоатах = %.30f\n", val1 - val2);
+    } else if (mod == 3){
+        s21_mul(value_1, value_2, result_ptr);
+        printf("результат во флоатах = %.30f\n", val1 * val2);
+    } else if (mod == 4){
+        //s21_div(value_1, value_2, result_ptr);
+        printf("результат во флоатах = %.30f\n", val1 / val2);
     }
     printf("%u\n", value_1.bits[0]);
     print_scale_ratio_16_23(value_1);

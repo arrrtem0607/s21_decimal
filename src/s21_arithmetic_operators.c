@@ -59,5 +59,28 @@ int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal* result) {
     return flag;
 }
 
-// int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result){
+    if (s21_get_sign_31(value_1) == s21_get_sign_31(value_2)){
+        s21_set_sign_31(0, result);
+    } else {
+        s21_set_sign_31(1, result);
+    }
+    s21_set_scale_ratio_16_23(s21_get_scale_ratio_16_23(value_1) + s21_get_scale_ratio_16_23(value_2), result);
+    for (int i = 0; i < START_INFO; i++){
+        result -> bits[0] += value_1.bits[0] * s21_get_bit(value_2, i);
+        result -> bits[1] += value_1.bits[1] * s21_get_bit(value_2, i);
+        result -> bits[2] += value_1.bits[2] * s21_get_bit(value_2, i);
+        value_1.bits[0] <<= 1;
+        value_1.bits[1] <<= 1;
+        value_1.bits[2] <<= 1;
+        if (s21_get_bit(value_2, 31)) {
+            value_1.bits[1] |= 1;
+        } else if (s21_get_bit(value_2, 63)) {
+            value_1.bits[2] |= 1;
+
+        }
+
+    }
+    return 0;
+}
 // int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
