@@ -2,7 +2,8 @@
 // Функции сравнения
 //посмотреть проверки на ноль сделать
 int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
-    s21_normalization(&value_1, &value_2, NULL);
+    s21_decimal res = {0};
+    s21_normalization(&value_1, &value_2, &res);
     int result = 0; // 0 - первое не меньше второго, 1 - первое меньше второго 
     int sign_1 = s21_get_sign_31(value_1);
     int sign_2 = s21_get_sign_31(value_2);
@@ -22,7 +23,8 @@ int s21_is_less(s21_decimal value_1, s21_decimal value_2) {
 }
 
 int s21_is_greater(s21_decimal value_1, s21_decimal value_2) {
-    s21_normalization(&value_1, &value_2, NULL);
+    s21_decimal res = {0};
+    s21_normalization(&value_1, &value_2, &res);
     int result = 0; // 0 - первое не больше второго, 1 - первое больше второго
     int sign_1 = s21_get_sign_31(value_1);
     int sign_2 = s21_get_sign_31(value_2);
@@ -42,12 +44,14 @@ int s21_is_greater(s21_decimal value_1, s21_decimal value_2) {
 //первое меньше второго 
 
 int s21_is_less_or_equal(s21_decimal value_1, s21_decimal value_2) {
-    s21_normalization(&value_1, &value_2, NULL);
+    s21_decimal res = {0};
+    s21_normalization(&value_1, &value_2, &res);
   return (s21_is_less(value_1, value_2) || s21_is_equal(value_1, value_2));
 }
 
-int s21_is_equal(s21_decimal value_1, s21_decimal value_2) {// первый вариант
-    s21_normalization(&value_1, &value_2, NULL);
+int s21_is_equal(s21_decimal value_1, s21_decimal value_2) {
+    s21_decimal res = {0};
+    s21_normalization(&value_1, &value_2, &res);
   int result = 0; 
     int sign_1 = s21_get_sign_31(value_1);
     int sign_2 = s21_get_sign_31(value_2);
@@ -96,12 +100,14 @@ int s21_is_equal(s21_decimal value_1, s21_decimal value_2) {// первый ва
   */
 
   int s21_is_greater_or_equal(s21_decimal value_1, s21_decimal value_2) {
-      s21_normalization(&value_1, &value_2, NULL);
+      s21_decimal res = {0};
+      s21_normalization(&value_1, &value_2, &res);
   return (s21_is_greater(value_1, value_2) || s21_is_equal(value_1, value_2));
 }
 
 int s21_is_not_equal(s21_decimal value_1, s21_decimal value_2) {
-    s21_normalization(&value_1, &value_2, NULL);
+    s21_decimal res = {0};
+    s21_normalization(&value_1, &value_2, &res);
   return !s21_is_equal(value_1, value_2);
 }
 // int s21_is_greater_or_equal(s21_decimal, s21_decimal) сравнивает два числа (больше или равно)+++++++++

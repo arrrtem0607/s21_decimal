@@ -51,31 +51,31 @@ build cmake_object_order_depends_target_test: phony || CMakeFiles/test.dir
 
 build CMakeFiles/test.dir/test.c.o: C_COMPILER__test_unscanned_Debug /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/test.c || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/test.c.o.d
-  FLAGS = -Wall -Werror -Wextra -lcheck -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -Wall -Werror -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
 build CMakeFiles/test.dir/s21_help_functions.c.o: C_COMPILER__test_unscanned_Debug /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/s21_help_functions.c || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/s21_help_functions.c.o.d
-  FLAGS = -Wall -Werror -Wextra -lcheck -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -Wall -Werror -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
 build CMakeFiles/test.dir/s21_arithmetic_operators.c.o: C_COMPILER__test_unscanned_Debug /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/s21_arithmetic_operators.c || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/s21_arithmetic_operators.c.o.d
-  FLAGS = -Wall -Werror -Wextra -lcheck -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -Wall -Werror -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
 build CMakeFiles/test.dir/s21_convertors_and_parsers.c.o: C_COMPILER__test_unscanned_Debug /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/s21_convertors_and_parsers.c || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/s21_convertors_and_parsers.c.o.d
-  FLAGS = -Wall -Werror -Wextra -lcheck -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -Wall -Werror -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
 build CMakeFiles/test.dir/s21_comparison_operators.c.o: C_COMPILER__test_unscanned_Debug /Users/DlyaNas/Desktop/Proga/School21/s21_decimal/src/s21_comparison_operators.c || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/s21_comparison_operators.c.o.d
-  FLAGS = -Wall -Werror -Wextra -lcheck -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -Wall -Werror -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
@@ -88,7 +88,7 @@ build CMakeFiles/test.dir/s21_comparison_operators.c.o: C_COMPILER__test_unscann
 # Link the executable test
 
 build test: C_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/test.c.o CMakeFiles/test.dir/s21_help_functions.c.o CMakeFiles/test.dir/s21_arithmetic_operators.c.o CMakeFiles/test.dir/s21_convertors_and_parsers.c.o CMakeFiles/test.dir/s21_comparison_operators.c.o
-  FLAGS = -Wall -Werror -Wextra -lcheck -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  FLAGS = -Wall -Werror -Wextra -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/test.dir
   POST_BUILD = :
   PRE_LINK = :

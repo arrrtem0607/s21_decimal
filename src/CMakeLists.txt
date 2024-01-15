@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(MyProject)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra -lcheck")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra")
 
 add_executable(test
         test.c

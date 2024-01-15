@@ -18,16 +18,17 @@ int main() {
     s21_decimal result = {0};
     s21_decimal *result_ptr = &result;
     scanf("%f %f", &val1, &val2);
-    printf("результат сложения флоатов = %.30f\n", val1 + val2);
+    //printf("результат сложения флоатов = %.30f\n", val1 + val2);
     s21_from_float_to_decimal(value_1_ptr, val1);
     s21_from_float_to_decimal(value_2_ptr, val2);
     int mod;
     scanf("%d", &mod);
     if (mod == 1) {
-        //s21_normalization(value_1_ptr, value_2_ptr, result_ptr);
         s21_add(value_1, value_2, result_ptr);
+        printf("результат во флоатах = %.30f\n", val1 + val2);
     } else if (mod == 2) {
-        //s21_sub(value_1, value_2, result_ptr);
+        s21_sub(value_1, value_2, result_ptr);
+        printf("результат во флоатах = %.30f\n", val1 - val2);
     }
     printf("%u\n", value_1.bits[0]);
     print_scale_ratio_16_23(value_1);
@@ -64,7 +65,7 @@ void print_scale_ratio_16_23(s21_decimal number) {
 }
 
 void print_s21_decimal(s21_decimal number) {
-    printf("результат сложения децималов = ");
+    printf("результат в децималах = ");
     // Проверяем знак числа
     int sign = s21_get_sign_31(number);
 

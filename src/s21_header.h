@@ -55,8 +55,7 @@ void s21_set_bit_big(int pos, int bit, s21_big_decimal* result); // устана
 
 // Арифметические функции
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);  // складывает два числа
-int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);  // вычитает два числа// void
-void s21_add_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal* result); //складывает или вычитает в зависимости от mod
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);  // вычитает два числа
 // int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); умножает два числа
 // int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); //делит два числа
 

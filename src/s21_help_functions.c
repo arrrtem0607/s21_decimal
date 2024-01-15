@@ -125,6 +125,8 @@ void s21_normalization(s21_decimal* number_1, s21_decimal* number_2, s21_decimal
             s21_set_scale_ratio_16_23(scale_low,number_2);
             s21_set_scale_ratio_16_23(scale_low, result);
         }
+    } else {
+        s21_set_scale_ratio_16_23(s21_get_scale_ratio_16_23(*number_1), result);
     }
 }
 
