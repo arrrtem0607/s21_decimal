@@ -21,6 +21,10 @@ int s21_get_bit(s21_decimal value, int index) {
     return (value.bits[index / 32] & (1u << (index % 32))) >> (index % 32);
 }
 
+int s21_get_bit_big(s21_big_decimal value, int index) {
+    return (value.bits[index / 32] & (1u << (index % 32))) >> (index % 32);
+}
+
 void s21_set_bit(int pos, int bit, s21_decimal* result) {
   if ((pos / 32 < 4) && bit)
     result -> bits[pos / 32] |= (1u << (pos % 32));
@@ -35,7 +39,14 @@ void s21_set_bit_big(int pos, int bit, s21_big_decimal* result) {
         result -> bits[pos / 32] &= ~(1u << (pos % 32));
 }
 
-
+s21_big_decimal s21_copy_decimal_to_bigdecimal(s21_decimal src) {
+    s21_big_decimal temp = {0};
+    for (int i = 0; i < 3; i++) {
+        temp.bits[i] = src.bits[i];
+    }
+    temp.bits[7] = src.bits[3];
+    return temp;
+}
 
 int s21_copy_bigdecimal_to_decimal(s21_big_decimal src, s21_decimal *dst) {
     int flag = check_overflow(src);

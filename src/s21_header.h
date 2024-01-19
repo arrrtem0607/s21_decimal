@@ -41,6 +41,7 @@ typedef struct s21_big_decimal {
 int s21_get_sign_31(s21_decimal value);  // возвращает знак числа
 int s21_get_scale_ratio_16_23(s21_decimal value);  // возвращает коэфициент масштабирования (scale)
 int s21_get_bit(s21_decimal value, int index);  // получает бит по индексу
+int s21_get_bit_big(s21_big_decimal value, int index);  // получает бит по индексу
 void s21_set_bit(int i, int res_value, s21_decimal* result);  // устанавливает бит по индексу
 void s21_set_sign_31(int sign, s21_decimal* value);  // устанавливает знак числа
 void s21_set_scale_ratio_16_23(int scale, s21_decimal* value);  // устанавливает коэфициент масштабирования (scale)
@@ -52,6 +53,7 @@ int s21_add_mantissas(s21_decimal value_1, s21_decimal value_2, s21_decimal* res
 int s21_sub_mantissas(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);
 void s21_decl_to_null(s21_decimal *decl); // обнуляет decimal
 void s21_set_bit_big(int pos, int bit, s21_big_decimal* result); // устанавливает бит по индексу в s21_big_decimal
+s21_big_decimal s21_copy_decimal_to_bigdecimal(s21_decimal src); // копирует из s21_decimal в s21_big_decimal
 
 // Арифметические функции
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal* result);  // складывает два числа
@@ -79,5 +81,7 @@ int s21_from_float_to_decimal(s21_decimal *dst, float input); // преобра�
 // int s21_truncate(s21_decimal value, s21_decimal *result) Возвращает целые цифры указанного Decimal числа; любые дробные цифры отбрасываются, включая конечные нули.
 // int s21_negate(s21_decimal value, s21_decimal *result) Возвращает результат умножения указанного Decimal на -1.
 
+void print_decimal_in_binary(s21_decimal value_1);
+void print_bigdecimal_in_binary(s21_big_decimal number);
 
 #endif
