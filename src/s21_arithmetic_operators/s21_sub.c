@@ -1,4 +1,4 @@
-#include "s21_header.h"
+#include "../s21_decimal.h"
 
 int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal* result) {
     s21_normalization(&value_1, &value_2, result);

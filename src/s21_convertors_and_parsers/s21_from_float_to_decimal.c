@@ -1,4 +1,4 @@
-#include "s21_header.h"
+#include "../s21_decimal.h"
 
 int s21_from_float_to_decimal(s21_decimal *dst, float input) {
     if (input < 0){

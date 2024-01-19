@@ -1,4 +1,4 @@
-#include "s21_header.h"
+#include "s21_decimal.h"
 
 int s21_get_sign_31(s21_decimal number) {
   return s21_get_bit(number, SIGN_POS);
