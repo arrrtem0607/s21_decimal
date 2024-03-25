@@ -18,7 +18,6 @@ int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result){
     int bit_159;
     int bit_191;
     for (int i = 0; i < START_INFO; i++){
-        print_bigdecimal_in_binary(value_1_big);
         bit_31 = s21_get_bit_big(value_1_big, 31);
         bit_63 = s21_get_bit_big(value_1_big, 63);
         bit_95 = s21_get_bit_big(value_1_big, 95);
